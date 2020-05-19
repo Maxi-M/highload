@@ -1,0 +1,6 @@
+2020/03/26 13:59:05 [emerg] 1#1: "user" directive is not allowed here in /etc/nginx/conf.d/nginx.conf:1
+2020/03/26 14:19:12 [emerg] 1#1: "user" directive is not allowed here in /etc/nginx/conf.d/nginx.conf:1
+2020/03/26 14:40:35 [emerg] 1#1: "user" directive is not allowed here in /etc/nginx/conf.d/nginx.conf:1
+2020/03/26 14:51:56 [emerg] 1#1: "pid" directive is not allowed here in /etc/nginx/conf.d/nginx.conf:2
+2020/03/26 15:04:17 [emerg] 1#1: "events" directive is not allowed here in /etc/nginx/conf.d/nginx.conf:4
+2020/03/26 15:07:33 [emerg] 1#1: "http" directive is not allowed here in /etc/nginx/conf.d/nginx.conf:7
