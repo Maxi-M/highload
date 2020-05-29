@@ -47,7 +47,7 @@ services:
     volumes:
       - ./../src:/var/www
     environment:
-      XDEBUG_CONFIG: "remote_host=192.168.220.1 remote_enable=1"
+      XDEBUG_CONFIG: "remote_host=host.docker.internal remote_enable=1 idekey=PHPSTORM"
       PHP_IDE_CONFIG: "serverName=Docker"
     depends_on:
       - mysql
