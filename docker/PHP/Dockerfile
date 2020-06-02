@@ -17,12 +17,16 @@ libpng-dev \
 libxml2-dev \
 libonig-dev \
 libzip-dev \
+libmemcached-dev \
+
 
 && docker-php-ext-install -j$(nproc) iconv mbstring mysqli pdo_mysql zip \
 && docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ \
 && docker-php-ext-install -j$(nproc) gd \
 && pecl install xdebug mcrypt-1.0.2\
-&& docker-php-ext-enable xdebug
+&& pecl install memcached-3.1.5\
+&& pecl install redis-5.2.2\
+&& docker-php-ext-enable xdebug memcached redis
 
 RUN docker-php-ext-configure intl
 RUN docker-php-ext-install intl
