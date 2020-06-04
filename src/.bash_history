@@ -33,3 +33,15 @@ apt
 apt install nmap
 su root
 exit
+netstat -tap
+php-fpm -m
+apt-get netstat
+apt-get install netstat
+sudo apt-get install netstat
+exit
+redis-cli
+exit
+ll /etc/systemd
+ls -la /etc/systemd
+ls -la /etc/systemd/system
+exit
