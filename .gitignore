@@ -2,3 +2,4 @@
 ./docker/nginx/logs/*
 ./docker/nginx1/logs/*
 ./docker/nginx2/logs/*
+.idea
