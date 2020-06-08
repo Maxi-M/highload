@@ -1,19 +1,12 @@
 <?php
 
-$cache = new Memcached();
-$cache->addServer('host.docker.internal', 11311);
-$cache->set('string', "Some string");
+// comment out the following two lines when deployed to production
+defined('YII_DEBUG') or define('YII_DEBUG', true);
+defined('YII_ENV') or define('YII_ENV', 'dev');
 
-var_dump($cache->get('string'));
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../vendor/yiisoft/yii2/Yii.php';
 
-session_start();
+$config = require __DIR__ . '/../config/web.php';
 
-if (isset($_GET['name'])) {
-    $_SESSION['myName'] = $_GET['name'];
-}
-
-If (isset($_SESSION['myName'])) {
-    echo "Привет ".$_SESSION['myName']."<br>";
-    echo "Session save path = ".session_save_path()."<br>";
-    echo "Session save handler = ".ini_get("session.save_handler");
-}
+(new yii\web\Application($config))->run();

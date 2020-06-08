@@ -20,7 +20,7 @@ libzip-dev \
 libmemcached-dev \
 
 
-&& docker-php-ext-install -j$(nproc) iconv mbstring mysqli pdo_mysql zip \
+&& docker-php-ext-install -j$(nproc) iconv mbstring mysqli pdo_mysql zip bcmath \
 && docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ \
 && docker-php-ext-install -j$(nproc) gd \
 && pecl install xdebug mcrypt-1.0.2\
